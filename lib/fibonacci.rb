@@ -5,11 +5,7 @@ class Fibonacci
       return 0
     elsif input == 1
       return 1
-    elsif input == 2
-      return 1
-    elsif input == 3
-      return 2
     end
-    0
+    self.number(input - 2) + self.number(input - 1)
   end
 end

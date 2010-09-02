@@ -15,4 +15,7 @@ describe "Fibonacci" do
   it "put 3" do
     Fibonacci.number(3).should == 2
   end
+  it "put 10" do
+    Fibonacci.number(10).should == 55
+  end
 end
