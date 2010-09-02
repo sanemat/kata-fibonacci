@@ -12,4 +12,7 @@ describe "Fibonacci" do
   it "put 2" do
     Fibonacci.number(2).should == 1
   end
+  it "put 3" do
+    Fibonacci.number(3).should == 2
+  end
 end
