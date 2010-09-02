@@ -4,8 +4,8 @@ class Fibonacci
     @stored = {}
   end
   def number(input)
-    if @stored.has_key?(input)
-      return @stored[input]
+    unless stored_number(input).nil?
+      return stored_number(input)
     end
     if input == 0
       @stored[input] = 0
