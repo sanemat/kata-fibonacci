@@ -4,8 +4,8 @@ class Fibonacci
     @stored = {}
   end
   def number(input)
-    unless stored_number(input).nil?
-      return stored_number(input)
+    unless restore_number(input).nil?
+      return restore_number(input)
     end
     if input == 0
       @stored[input] = 0
@@ -14,10 +14,10 @@ class Fibonacci
     else
       @stored[input] = number(input - 2) + number(input - 1)
     end
-    stored_number input
+    restore_number input
   end
 
-  def stored_number(input)
+  def restore_number(input)
     @stored[input] || nil
   end
 end
