@@ -14,6 +14,6 @@ class Fibonacci
     else
       @stored[input] = number(input - 2) + number(input - 1)
     end
-      @stored[input]
+    @stored[input]
   end
 end
