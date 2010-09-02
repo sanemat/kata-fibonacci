@@ -2,6 +2,6 @@
 require 'spec'
 describe "Fibonacci" do
   it "" do
-    Fibonacci.should be_true
+    lambda {Fibonacci.new}.should_not raise_error
   end
 end
