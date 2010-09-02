@@ -24,7 +24,6 @@ describe "Fibonacci" do
     fibonacci.number(10).should == 55
   end
   it "put 100" do
-    pending
     fibonacci = Fibonacci.new
     fibonacci.number(100).should == 354224848179261915075
   end

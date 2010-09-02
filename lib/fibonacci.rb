@@ -1,13 +1,19 @@
 # encoding: utf-8
 class Fibonacci
   def initialize
+    @stored = {}
   end
   def number(input)
-    if input == 0
-      return 0
-    elsif input == 1
-      return 1
+    if @stored.has_key?(input)
+      return @stored[input]
     end
-    number(input - 2) + number(input - 1)
+    if input == 0
+      @stored[input] = 0
+    elsif input == 1
+      @stored[input] = 1
+    else
+      @stored[input] = number(input - 2) + number(input - 1)
+    end
+      @stored[input]
   end
 end
