@@ -4,18 +4,28 @@ require 'fibonacci'
 require 'spec'
 describe "Fibonacci" do
   it "put 0" do
-    Fibonacci.number(0).should == 0
+    fibonacci = Fibonacci.new
+    fibonacci.number(0).should == 0
   end
   it "put 1" do
-    Fibonacci.number(1).should == 1
+    fibonacci = Fibonacci.new
+    fibonacci.number(1).should == 1
   end
   it "put 2" do
-    Fibonacci.number(2).should == 1
+    fibonacci = Fibonacci.new
+    fibonacci.number(2).should == 1
   end
   it "put 3" do
-    Fibonacci.number(3).should == 2
+    fibonacci = Fibonacci.new
+    fibonacci.number(3).should == 2
   end
   it "put 10" do
-    Fibonacci.number(10).should == 55
+    fibonacci = Fibonacci.new
+    fibonacci.number(10).should == 55
+  end
+  it "put 100" do
+    pending
+    fibonacci = Fibonacci.new
+    fibonacci.number(100).should == 354224848179261915075
   end
 end
