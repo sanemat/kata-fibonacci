@@ -7,6 +7,6 @@ describe "Fibonacci" do
     Fibonacci.number(0).should == 0
   end
   it "put 1" do
-    Fibonacci.number(0).should == 0
+    Fibonacci.number(1).should == 1
   end
 end
