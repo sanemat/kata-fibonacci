@@ -8,16 +8,26 @@ class Fibonacci
       return restore_fibonacci(input)
     end
     if input == 0
-      @stored[input] = 0
+      store_number(input, 0)
     elsif input == 1
-      @stored[input] = 1
+      store_number(input, 1)
     else
-      @stored[input] = number(input - 2) + number(input - 1)
+      store_number(input, twice_before_fibonacci(input) + before_fibonacci(input))
     end
     restore_fibonacci input
   end
+  def twice_before_fibonacci(input)
+    number(input - 2)
+  end
+  def before_fibonacci(input)
+    number(input - 1)
+  end
 
-  def restore_number(input)
+  def store_number(input, fibonacci_number)
+    @stored[input] = fibonacci_number
+  end
+
+  def restore_fibonacci(input)
     @stored[input] || nil
   end
 end
