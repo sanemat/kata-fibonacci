@@ -6,4 +6,7 @@ describe "Fibonacci" do
   it "" do
     lambda {Fibonacci.new}.should_not raise_error
   end
+  it "put 1" do
+    Fibonacci.number(0).should == 0
+  end
 end
