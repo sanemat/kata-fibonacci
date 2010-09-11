@@ -1,5 +1,7 @@
 # encoding: utf-8
+require 'active_support/memoizable'
 class Fibonacci
+  extend ActiveSupport::Memoizable
   def initialize
     @stored = {}
   end
@@ -16,6 +18,7 @@ class Fibonacci
     end
     restore_fibonacci input
   end
+  memoize :number
   def twice_before_fibonacci_plus_before_fibonacci(input)
     number(input - 2) + number(input - 1)
   end
